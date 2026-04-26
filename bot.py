@@ -51,15 +51,15 @@ class TicketBot(commands.Bot):
     async def setup_hook(self):
         """Carrega extensões (cogs)"""
         try:
-            await self.load_extension("cogs.tickets")
+            await self.load_extension("engrenagens.tickets")
             print("✅ Módulo de tickets carregado")
-            await self.load_extension("cogs.moderacao")
+            await self.load_extension("engrenagens.moderacao")
             print("✅ Módulo de moderação carregado")
-            await self.load_extension("cogs.mensagens")
+            await self.load_extension("engrenagens.mensagens")
             print("✅ Módulo de mensagens carregado")
-            await self.load_extension("cogs.utilitarios")
+            await self.load_extension("engrenagens.utilitarios")
             print("✅ Módulo de utilitários carregado")
-            await self.load_extension("cogs.automod")
+            await self.load_extension("engrenagens.automod")
             print("✅ Módulo de automoderação carregado")
             await self.tree.sync()
             print("✅ Comandos sincronizados!")
